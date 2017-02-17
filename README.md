@@ -2,12 +2,13 @@ Description of topic:
 
 InstaFood will let a cook snap a picture of the meal he cooked and upload it. A hungry person can just open the app, browse through the pictures put up by various cooks, and order his home-made meal.
 Website functionalities:
+
 Every user can play either of/or both the roles:
 1. Buyer ( user who wants to buy food)
 2. Seller ( user who wants to sell food)
 
 Roles for Buyer:
- Register on the website- user name, first name, last name, gender, email ID.
+ Register on the website- user name, first name, last name, gender, email ID
  Sign into the site
  Browse through various food items from multiple cuisines
  Select food item(s) and view Order summary
@@ -21,19 +22,16 @@ Roles for Buyer:
  Confirm delivery of the item
  Fulfil pending orders
  Can view posteditems list
- InstaFood
+
   Therefore we came up with the idea of creating a platform to connect foodies who are tired of
  spending on restaurants with home chefs who could gain monetarily for their efforts.
-   2
-     Technical Details:
-We developed out website using MEAN STACK (MongoDB, express js, angular js and node js) on windows platform.
- Installations:
- Installed and used text editors – IntelliJ and sublime text
- Mongodb installation
- Git bash installation for running mongodb commands
- Nodejs installation
+
+ developed out website using MEAN STACK (MongoDB, express js, angular js and node js) on windows platform.
+
+
  Node packages installations (these can be installed through command line statements).
-The main reason we chose MEAN:
+
+The main reason I chose MEAN:
  Open source and can be used in any operating system.
  Supports MVC ( model view controller architecture)
  MongoDb is a schemaless database framework which doesn’t involve any complex joins and
