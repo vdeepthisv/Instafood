@@ -1,0 +1,57 @@
+<div class="col-md-6 col-md-offset-3">
+  <title>Edit My Uploads</title>
+  <h1 class="text-center">Edit Food Offered</h1>
+  <form name="myForm">
+    <div id="formTabsContent" class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="forms" aria-labelledby="formsTab">
+        <table class="table table-striped table-bordered">
+          <tbody>
+
+            <div class="form-group">
+              <label for="image" class="col-sm-2 control-label">Image</label>
+              <div class="col-sm-10">
+                <input type="file" accept="image/*" class="form-control" id="image"
+                onchange="angular.element(this).scope().imageChanged(this)">
+              </div>
+            </div>
+            <div id="display"></div>
+
+            <div class="form-group">
+              <label for="category" class="control-label ">Pick Variety Type:</label>
+              <select ng-required="true"  name="variety" ng-model="model.food.variety" class="form-control" type="text">
+                <option ng-repeat="c in model.varieties" value="{{c}}">{{c}}</option>
+              </select>
+              <p class="displayerrormessage" ng-show="myForm.variety.$invalid && myForm.variety.$touched">Please select cuisine type.</p>
+            </div>
+
+
+            <div class="form-group">
+              <label for="title" class="control-label ">Title:</label>
+              <input ng-required="true" name="title" ng-minlength="4" ng-maxlength="50" ng-model="model.food.title" placeholder="Food title" type="text" class="form-control" >
+              <p class="displayerrormessage" ng-show="myForm.title.$invalid && myForm.title.$touched">Please pick a valid title with atleast 4 characters.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="description" class="control-label">Description:</label>
+              <textarea ng-required="true" name="description" ng-minlength="10" ng-maxlength="450" ng-model="model.food.description" placeholder="Description" type="text" class="form-control" ></textarea>
+              <p class="displayerrormessage" ng-show="myForm.description.$invalid && myForm.description.$touched">Tell us about your dish</p>
+            </div>
+
+            <div class="form-group">
+              <label for="cost" class="control-label ">Cost:</label>
+              <input name="cost" ng-pattern="/^[0-9]{1,7}$/" ng-required="true" min="1" ng-model="model.food.cost" type="number" class="form-control"  placeholder="Cost">
+              <p class="displayerrormessage" ng-show="myForm.cost.$error.pattern">Please enter a valid number</p>
+              <p class="displayerrormessage" ng-show="myForm.cost.$invalid && myForm.cost.$touched">Please enter cost of food item.</p>
+            </div>
+
+            <div class="form-group">
+              <button ng-disabled="myForm.variety.$invalid || myForm.title.$invalid || myForm.description.$invalid || myForm.cost.$invalid" ng-click="model.update(model.food)" class="btn btn-default btn-success btn-block">Update Food</button>
+              <button ng-click="model.home()" class="btn btn-default btn-primary btn-block">Home</button>
+            </div>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </form>
+</div>

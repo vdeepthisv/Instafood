@@ -1,0 +1,52 @@
+<div class="col-md-6 col-md-offset-3">
+  <title>Sign up</title>
+  <h1 class="text-center">Register</h1>
+  <form name="myForm">
+    <div class="form-group">
+      <label for="user-name" class="control-label text-left">Username:</label>
+      <input ng-required="true" name="username" ng-minlength="3" ng-maxlength="25" ng-model="model.user.username" type="text" class="form-control" id="user-name" placeholder="Username">
+      <p class="displayerrormessage" ng-show="myForm.username.$invalid && myForm.username.$touched">Please pick a username between 3 - 10 characters.</p>
+    </div>
+
+    <div class="form-group">
+      <label for="password" class="control-label text-left">Password:</label>
+      <input ng-required="true" name="password" ng-minlength="4" ng-model="model.user.password" type="password" class="form-control" id="password" placeholder="Password">
+      <p class="displayerrormessage" ng-show="myForm.password.$invalid && myForm.password.$touched">Password should contain atleast 4 characters.</p>
+    </div>
+
+    <div class="form-group">
+      <label for="verify-password" class="control-label text-left">Verify Password:</label>
+      <input ng-required="true" name="verifyPassword" ng-minlength="4" ng-model="model.user.verifyPassword" type="password" class="form-control" id="verify-password" placeholder="Verify Password">
+      <p class="displayerrormessage" ng-show="(model.user.verifyPassword != '') && (model.user.password != model.user.verifyPassword)">Passwords don't match.</p>
+    </div>
+    
+    <div class="form-group">
+      <label for="first-name" class="control-label text-left">First Name:</label>
+      <input ng-required="true" name="firstName" ng-model="model.user.firstName" type="text" class="form-control" id="first-name" placeholder="Fisrt Name">
+      <p class="displayerrormessage" ng-show="myForm.firstName.$invalid && myForm.firstName.$touched">Please enter your first name.</p>
+    </div>
+
+    <div class="form-group">
+      <label for="last-name" class="control-label text-left">Last Name:</label>
+      <input ng-required="true" name="lastName" ng-model="model.user.lastName" type="text" class="form-control" id="last-name" placeholder="Last Name">
+      <p class="displayerrormessage" ng-show="myForm.lastName.$invalid && myForm.lastName.$touched">Please enter your last name.</p>      
+    </div>
+
+    <div class="form-group">
+      <label for="gender" class="control-label text-left">Gender:</label>
+      <select required="true" name="gender" ng-model="model.user.gender" class="form-control" type="text">
+        <option ng-repeat="g in model.genders" value="{{g}}">{{g}}</option>
+      </select>
+      <p class="displayerrormessage" ng-show="myForm.gender.$invalid && myForm.gender.$touched">Please select gender.</p>        
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="control-label text-left">Email:</label>
+      <input ng-required="true" name="email" ng-model="model.user.email" type="email" class="form-control" id="email" placeholder="Email">
+      <p class="displayerrormessage" ng-show="myForm.email.$invalid && myForm.email.$touched">Please enter a valid email address.</p>      
+    </div>
+
+    <button ng-disabled="myForm.username.$invalid || myForm.gender.$invalid || myForm.password.$invalid || myForm.email.$invalid || myForm.firstName.$invalid || myForm.lastname.$invalid" ng-click="model.register(model.user)" class="btn btn-success btn-block">Register</button>
+    <a ng-href="#/login" class="btn btn-default btn-block text-center">Login</a>
+  </form>
+</div>

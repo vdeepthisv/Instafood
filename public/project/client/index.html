@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Instafood">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-cookies.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-messages.min.js"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript" src="js/angular-stripe-checkout.js"></script>
+    <script src="//cdn.bootcss.com/ng-dialog/0.5.5/js/ngDialog.min.js"></script>
+    <link href="//cdn.bootcss.com/ng-dialog/0.5.5/css/ngDialog.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/ng-dialog/0.5.5/css/ngDialog-theme-default.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/ng-dialog/0.5.5/css/ngDialog-theme-plain.min.css" rel="stylesheet">
+   
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-resource.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&libraries=places&language=en-US"></script>
+    <script type="text/javascript" src="js/ng-file-upload-shim.min.js"></script>
+    <script type="text/javascript" src="js/ng-file-upload.min.js"></script>
+
+  
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-animate.js"></script>
+    <link rel='stylesheet' href='css/loading-bar.min.css' type='text/css' media='all' />
+    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.js'></script>
+
+    <script src="app.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="config.js"></script>
+    
+    <script src="services/profile_user_service.js"></script>
+    <script src="services/payforfood_service.js"></script>
+    <script src="services/fooditem_service.js"></script>
+    <script src="services/food_order_service.js"></script>
+    <script src="services/getnotifications_service.js"></script>
+ 
+    <script src="views/commanpage/commanpage_controller.js"></script>
+    <script src="views/findfood/findfood_controller.js"></script>
+    <script src="views/item/item_controller.js"></script>
+    <script src="views/login/userlogin_controller.js"></script>
+    <script src="views/myaccount/myaccount_controller.js"></script>
+    <script src="views/register/register_controller.js"></script>
+    <script src="views/buyer/buyer_controller.js"></script>
+    <script src="views/sellfood/sellfood_controller.js"></script>
+    <script src="views/displayinfo/displayinfo_controller.js"></script>
+    <script src="views/fooditemupload/editfooditemupload_controller.js"></script>
+    <script src="views/fooditemupload/fooditemupload_controller.js"></script>
+    <script src="views/buyfoodhistory/buyfoodorderhistory_controller.js"></script>
+    
+
+  </head>
+
+  <body>   
+    <div class="container-fluid">
+
+      <div ng-include="'views/commanpage/commanpage_v.html'"></div> 
+      <div class="container">
+         <div class="article clearfix">
+          <div ng-view></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

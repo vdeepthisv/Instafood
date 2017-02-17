@@ -1,0 +1,29 @@
+
+<title>InstaFood Menu</title>
+<h1 class="text-center">InstaFood Menu</h1>
+
+<form name="myForm">
+<div class="col-md-4 col-md-offset-2">
+  <img ng-src="{{model.food.image}}" class="col-xs-12">
+</div>
+<div class="col-md-4">
+  <p>{{model.food.title}} - {{model.food.variety}} dish!</p>
+  <p>{{model.food.description}}</p>
+  <div class="form-group">
+    <google-places name="userLocation" ng-required="true" class="form-control" location=location></google-places>
+    <p class="displayerrormessage" ng-show="myForm.userLocation.$invalid && myForm.userLocation.$touched">Please enter delivery address</p>
+   
+    <textarea name="description" placeholder="no comments" ng-minlength="5" ng-maxlength="20" ng-model="model.food.comments" type="text" class="form-control"></textarea>
+    </div>
+  <div class="form-group">
+    <button class="btn btn-default btn-success btn-block" stripe-checkout="model.doCheckout"
+       data-key="pk_test_2J6eX3mazwmRTFzcjVMSerVp"
+       
+      data-name="{{model.food.title}}"
+      data-description="{{model.food.description}}"
+      data-amount="{{model.food.cost * 100}}">Pay ${{model.food.cost}}
+    </button>
+    <button ng-disabled="myForm.$invalid" ng-click="model.home()" class="btn btn-default btn-primary btn-block">Home</button>
+  </div>
+</div>
+</form>

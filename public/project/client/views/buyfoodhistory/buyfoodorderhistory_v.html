@@ -1,0 +1,26 @@
+<title>My orders</title>
+<h1 ng-if="model.foodItems.length != 0" class="text-center">My orders</h1>
+<div class="tab-content"> 
+  <div class="search-container clearfix"> 
+    <div class="col-md-12">
+      <div ng-repeat="food in model.foodItems" class="food-item">
+        <div class="info">
+          <div class="title"><b>{{food.title}} - ${{food.cost}}</b></div>
+          <div class="date"><b>{{food.orderDate | date: 'short' }}</b></div>
+        </div>
+        <div class="food-image">
+          <img ng-src="{{food.image}}" class="col-xs-12">
+        </div>
+        <div class="info">
+          <div class="title"><b>{{food.variety}} Variety</b></div>
+          <div></div>
+        </div>
+      </div>
+      <div ng-if="model.foodItems.length == 0">
+        <br>
+        <br>
+        <h3 class="text-center">No order history found.</h3>
+      </div> 
+    </div>
+  </div>
+</div>

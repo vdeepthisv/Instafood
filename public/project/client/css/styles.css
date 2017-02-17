@@ -1,0 +1,255 @@
+
+body {
+  padding-top: 60px;
+  background-color: #fff;
+}
+
+
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar-fixed-top {
+  border: 0;
+}
+
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; 
+    background-color: #f6f6f6;
+    border-right: 1px solid #eee;
+  }
+}
+
+.nav-sidebar {
+  margin-right: -21px; 
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+ .main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+.displayerrormessage {
+  color: blue;
+  padding-bottom: 4px;
+}
+
+ .placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.navbar-nav > li:first-child::after {
+  background-color: #c8c8c8;
+  content: "";
+  display: inline-block;
+  height: 12px;
+  width: 1px;
+  margin: 0 10px;
+}
+
+.navbar-navb li:last-child::after {
+  display: none; 
+}
+
+.user-area {
+  padding: 10px 30px 0 0;
+}
+
+.user-icon {
+  color: #fff;
+  font-size: 25px;
+}
+
+.glyphicon2x {
+  margin-left: 5px;
+  margin-right: 5px; 
+  font-size: 30px;
+}
+
+.glyphicon1x {
+  margin-left: 5px;
+  margin-right: 5px; 
+  font-size: 25px;
+}
+
+.formFieldDivMargin {
+  margin-bottom: 10px;
+}
+
+.bottomBorder {
+  border-bottom: 2px solid;
+}
+
+html, body, .container-fluid, .container {
+  height: 100%;
+}
+
+.article {
+  padding: 10px 0;
+  min-height: 100%;
+}
+
+#leftAlignLabel label {
+  text-align: left;
+}
+
+.search-form {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.search-form form {
+  padding: 10px 0 10px;
+  box-shadow: 0px 0px 7px #dbdbde;
+  background: #fff;
+}
+
+.search-container {
+  margin: 20px 0;
+}
+
+.outline-box {
+  border-radius: 3px;
+  box-shadow: 0px 0px 7px #dbdbde;  
+  background-color: #fff;
+  overflow: hidden;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.search-result-details {
+  color: #000000;
+  padding-left: 30px;
+}
+
+.search-result-image {
+  moz-border-radius: 3px;
+  webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.search-detail {
+  margin-top: 20px;
+  text-align: center;
+}
+.search-result-image > a img {
+  height: 140px;
+  width: 140px;
+}
+
+.food-detail {
+  padding-top: 75px;
+}
+
+.food-detail-image {
+  width: 180px;
+  padding: 0 0 10px;
+}
+
+.tableBG {
+  background-color: rgb(255, 255, 255);
+}
+
+.table>tbody>tr>td {
+ padding-top: 15px;
+ padding-bottom: 15px;
+}
+
+.vertical-gap {
+  margin-top: 85px;
+  text-align: center;
+}
+
+
+.food-item {
+  width: 46%;
+  float: left;
+  box-shadow: 0px 0px 7px #dbdbde;
+  margin: 10px;
+}
+
+.food-item .food-image img {
+  padding: 0;
+}
+
+.food-item .info .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 66%;
+  font-style: normal;
+  font-size: 13px;
+  color: #919191;
+  font-weight: 300;
+  float: left;
+  margin: 10px;
+  padding-top: 8px;
+}
+
+.price {
+  font-style: normal;
+  font-size: 14px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 10px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid #DA3637;
+}
+
+input.ng-valid.ng-touched {
+  border: 1px solid #509D12;
+}
+
+textarea.ng-invalid.ng-touched {
+  border: 1px solid #DA3637;
+}
+
+textarea.ng-valid.ng-touched {
+  border: 1px solid #509D12;
+}
+

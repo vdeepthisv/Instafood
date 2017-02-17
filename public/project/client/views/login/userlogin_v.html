@@ -1,0 +1,27 @@
+<div class="col-md-6 col-md-offset-3">
+  <title>Login</title>
+  <h1 class="text-center">Login</h1>
+  <form name="myForm">
+    <div class="form-group">
+      <label for="Username" class="control-label">Username:</label>
+      <input name="username" ng-minlength="3" ng-maxlength="25" ng-required="true" ng-model="user.username" type="text" class="form-control" placeholder="Username">
+      <p class="displayerrormessage" ng-show="myForm.username.$invalid && myForm.username.$touched">Your username</p>
+    </div>
+
+    <div class="form-group">
+      <label for="Password" class="control-label">Password:</label>
+      <input name="password" ng-minlength="4" ng-required="true" ng-model="user.password" type="password" class="form-control" placeholder="Password">
+      <p class="displayerrormessage" ng-show="myForm.password.$invalid && myForm.password.$touched">Enter your password</p>
+    </div>
+
+    <div class="form-group">
+      <button ng-disabled="myForm.username.$invalid || myForm.password.$invalid" ng-click="login()" class="btn btn-success btn-block">Login</button>
+    </div>
+
+  </form>
+
+  <p class="col-xs-offset-6 col-md-offset-6"> Or </p>
+
+  <a href="/auth/google" class="btn btn-primary btn-block">Sign in with Google</a>
+ 
+</div>

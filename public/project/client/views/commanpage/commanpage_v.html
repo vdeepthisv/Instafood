@@ -1,0 +1,54 @@
+ <nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="HeaderController">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/item">Insta Food</a>
+     </div>
+   <span ng-show="user">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right user-area">
+        <li>
+          <button ng-click="showNotifications()" class="btn btn-default" type="button">Pending orders to fulfill</button>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <span class="glyphicon glyphicon-user"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#/myaccount">Profile</a></li>
+              <li><a href="#/findfood">Search</a></li>
+              <li><a ng-href="#/sellfood">Add new food</a></li>
+              <li><a ng-href="#/fooditemupload">My Uploads</a></li>
+              <li><a href="#/buyfoodhistory">My Order history</a></li>
+              <li><a ng-click="logout()">Logout</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    </span>
+    <span ng-show="!user">
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right user-area">
+          <li>
+
+            <button ng-click="search()" class="btn btn-default" type="button">Search</button>
+          </li>
+          <li>
+            <button ng-click="login()" class="btn btn-default" type="button">Login</button>
+          </li>
+
+          <li>
+            <button ng-click="signUp()" class="btn btn-default" type="button">Register</button>
+          </li>
+        </ul>
+      </div>
+    </span>
+  </div>
+</nav>
